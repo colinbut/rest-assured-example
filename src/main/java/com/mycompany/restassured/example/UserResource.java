@@ -31,17 +31,17 @@ public class UserResource {
     private User getUser() {
         User user = new User();
         user.setUserId(1);
-        user.setFirstName("Colin");
-        user.setSecondName("But");
-        user.setDob(new Date(1988, 2, 27));
-        user.setEmail("colin.but@outlook.com");
+        user.setFirstName("Joe");
+        user.setSecondName("Bloggs");
+        user.setDob(new Date(1980, 8, 29));
+        user.setEmail("me@email.com");
         
         Address address = new Address();
-        address.setFirstLineAddress("FirstLineAddress");
-        address.setSecondLineAddress("SecondLineAddress");
-        address.setPostCode("PostCode");
-        address.setCity("City");
-        address.setCountry("Country");
+        address.setFirstLineAddress("My First Line Address");
+        address.setSecondLineAddress("My Second Line Address");
+        address.setPostCode("MU3 28P");
+        address.setCity("Paris");
+        address.setCountry("UK");
         user.setAddress(address);
         
         return user;
