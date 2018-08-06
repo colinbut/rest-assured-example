@@ -29,7 +29,7 @@ and you would get back the following JSON response
 }
 ```
 
-### The API Test
+### The API Test
 
  Using the Rest Assured library we write the test code as:
 
