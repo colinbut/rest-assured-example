@@ -29,6 +29,32 @@ and you would get back the following JSON response
 }
 ```
 
+ ### The API Test
+
+ Using the Rest Assured library we write the test code as:
+
+ ```java
+    @Test
+    public void testGetUserDetails() {
+        when().
+            get("/user/{userId}", 1).
+        then().
+            statusCode(200).
+            body("userId", equalTo(1),
+                 "firstName", equalTo("Joe"),
+                 "secondName", equalTo("Bloggs"),
+                 "email", equalTo("me@email.com"),
+                 "address.firstLineAddress", equalTo("My First Line Address"),
+                 "address.secondLineAddress", equalTo("My Second Line Address"),
+                 "address.postCode", equalTo("MU3 28P"),
+                 "address.city", equalTo("Paris"),
+                 "address.country", equalTo("UK"));
+    }
+ ```
+
+ See `UserResourceAPITest.java` in the source code.
+
+
 ### Technologies
 
 - Java 8
